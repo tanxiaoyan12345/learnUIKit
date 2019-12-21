@@ -26,6 +26,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setup];
+    
+    /**
+     MARK:@ydhz 一定域(至少是一个类)内命名风格尽量一致，如init和create可以划为同一类事情
+     */
+
     [self createcollectionview];
     [self initButton];
     NSLog(@"%@",NSStringFromCGRect(self.lxrInfoView.frame));
@@ -46,10 +51,16 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-    
+    /**
+     MARK:@ydhz 写代码过程中自己阅读警告信息，绝大多数场景警告是需要解决的
+     */
+
     self.navigationController.delegate = self;
 }
 
+/**
+ MARK:@ydhz OC方法尽量能够自解释，方法名setup可以具体细化为setupNavigationBar
+ */
 
 - (void)setup{
     self.title = @"通讯录";
@@ -103,6 +114,11 @@
     
     
 }
+
+/**
+ MARK:@ydhz 直接利用button的controlEvents是一个思路👍
+ TODO:@txy 1.了解卡顿原因 2.参考多闪工程中MYCameraControllerView里录制按钮的跟手实现
+ */
 
 #pragma mark - button对应事件
 - (void) dragMoving: (UIControl *) c withEvent:ev
