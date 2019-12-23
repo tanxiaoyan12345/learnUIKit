@@ -31,12 +31,32 @@
     self.window.backgroundColor = [UIColor whiteColor];
     RootViewController *rootVc = [[RootViewController alloc]init];
     rootVc.view.backgroundColor = [UIColor whiteColor];
-    RootNavigationViewController *rootNav = [[RootNavigationViewController alloc]initWithRootViewController:rootVc];
+    UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:rootVc];
     [self.window setRootViewController:rootNav];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"applicationWillEnterForeground");
+ 
+}
+ 
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"applicationDidEnterBackground");
+ 
+}
+ 
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"applicationDidBecomeActive");
+ 
+}
+ 
+- (void)applicationWillResignActive:(UIApplication *)application {
+    NSLog(@"applicationWillResignActive");
+ 
+}
 /**
  MARK:@ydhz iOS 13系统同时实现上、下这些方法会黑屏
  TODO:@txy 了解UISceneDelegate的原理

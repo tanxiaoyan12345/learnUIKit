@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong,nonatomic) UIImageView * myImgView;
 
 /**
- MARK:@ydhz 每次提交commit之前养成自己review一遍的习惯，删除测试代码和无用变量，最好也不要提交自己debug lgog相关代码
+ MARK:@ydhz 每次提交commit之前养成自己review一遍的习惯，删除测试代码和无用变量，最好也不要提交自己debug log相关代码
  */
 @property (strong,nonatomic) UIButton * flag;
 

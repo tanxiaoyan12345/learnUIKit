@@ -33,7 +33,7 @@
 
 - (void)deafultSet {
     
-    _transitionDuration = 0.2f;
+    _transitionDuration = 0.5f;
 }
 
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext {

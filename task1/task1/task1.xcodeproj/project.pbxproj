@@ -11,7 +11,6 @@
 		CE3FB6BD23A7952B0026AAB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB6BC23A7952B0026AAB6 /* Assets.xcassets */; };
 		CE3FB6C023A7952B0026AAB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB6BE23A7952B0026AAB6 /* LaunchScreen.storyboard */; };
 		CE3FB6C323A7952B0026AAB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB6C223A7952B0026AAB6 /* main.m */; };
-		CE3FB6CB23A7E0F40026AAB6 /* RootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB6CA23A7E0F40026AAB6 /* RootNavigationViewController.m */; };
 		CE3FB6CE23A7E1230026AAB6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB6CD23A7E1230026AAB6 /* RootViewController.m */; };
 		CE3FB6D123A7E1360026AAB6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB6D023A7E1360026AAB6 /* SecondViewController.m */; };
 		CE3FB6DD23A878480026AAB6 /* BaseAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB6DC23A878480026AAB6 /* BaseAnimator.m */; };
@@ -41,8 +40,6 @@
 		CE3FB6BF23A7952B0026AAB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3FB6C123A7952B0026AAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3FB6C223A7952B0026AAB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE3FB6C923A7E0F40026AAB6 /* RootNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNavigationViewController.h; sourceTree = "<group>"; };
-		CE3FB6CA23A7E0F40026AAB6 /* RootNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNavigationViewController.m; sourceTree = "<group>"; };
 		CE3FB6CC23A7E1230026AAB6 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		CE3FB6CD23A7E1230026AAB6 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		CE3FB6CF23A7E1360026AAB6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -134,8 +131,6 @@
 		CE3FB73F23AA503B0026AAB6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CE3FB6C923A7E0F40026AAB6 /* RootNavigationViewController.h */,
-				CE3FB6CA23A7E0F40026AAB6 /* RootNavigationViewController.m */,
 				CE3FB6CC23A7E1230026AAB6 /* RootViewController.h */,
 				CE3FB6CD23A7E1230026AAB6 /* RootViewController.m */,
 				CE3FB6CF23A7E1360026AAB6 /* SecondViewController.h */,
@@ -246,7 +241,6 @@
 			files = (
 				CE3FB6D123A7E1360026AAB6 /* SecondViewController.m in Sources */,
 				CE3FB71B23A8D0BE0026AAB6 /* LXRCollectionViewCell.m in Sources */,
-				CE3FB6CB23A7E0F40026AAB6 /* RootNavigationViewController.m in Sources */,
 				CE3FB74523AA59AE0026AAB6 /* BiggerClickAreaButton.m in Sources */,
 				CE3FB6B223A7952A0026AAB6 /* AppDelegate.m in Sources */,
 				CE3FB6E023A880120026AAB6 /* PushAnimator.m in Sources */,

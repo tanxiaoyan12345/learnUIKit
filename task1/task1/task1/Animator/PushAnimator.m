@@ -10,7 +10,9 @@
 
 @implementation PushAnimator
 - (void)animateTransitionEvent {
+     NSLog(@"push-->%@",self.containerView);
     [self.containerView addSubview:self.toViewController.view];
+   
     self.toViewController.view.alpha   = 0.f;
     [UIView animateWithDuration:self.transitionDuration
                           delay:0.0f

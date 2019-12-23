@@ -11,32 +11,35 @@
 #import "PopAnimator.h"
 #import "LXRCollectionViewCell.h"
 #import "BiggerClickAreaButton.h"
+
 @interface SecondViewController ()
 
-@property (nonatomic,strong) UICollectionView * lxrInfoView;
+@property (nonatomic, strong) UICollectionView *lxrInfoView;
 @property (nonatomic,strong) NSArray * pictures;
 @property (nonatomic,strong) NSArray * names;
 @property (nonatomic,strong) BiggerClickAreaButton * flagButton;
 
 @end
 
+
 @implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setup];
-    
+    [self setupNavigationBar];
+    self.navigationController.delegate = self;
     /**
      MARK:@ydhz 一定域(至少是一个类)内命名风格尽量一致，如init和create可以划为同一类事情
      */
 
-    [self createcollectionview];
+    [self initcollectionview];
     [self initButton];
-    NSLog(@"%@",NSStringFromCGRect(self.lxrInfoView.frame));
-    NSLog(@"%@",NSStringFromCGRect(self.flagButton.frame));
+   // NSLog(@"%@",NSStringFromCGRect(self.lxrInfoView.frame));
+   // NSLog(@"%@",NSStringFromCGRect(self.flagButton.frame));
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -54,15 +57,15 @@
     /**
      MARK:@ydhz 写代码过程中自己阅读警告信息，绝大多数场景警告是需要解决的
      */
-
-    self.navigationController.delegate = self;
+    
+    
 }
 
 /**
  MARK:@ydhz OC方法尽量能够自解释，方法名setup可以具体细化为setupNavigationBar
  */
 
-- (void)setup{
+- (void)setupNavigationBar{
     self.title = @"通讯录";
     // self.view.backgroundColor = [UIColor yellowColor];
 }
@@ -87,8 +90,12 @@
     return nil;
 }
 
-
-- (void) createcollectionview{
+- (void)navigationController:(UINavigationController *)navigationController  willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    BOOL isShowTempPage = [viewController isKindOfClass:[self class]];
+    NSLog(@"second----%s",isShowTempPage?"YES":"NO");
+    [self.navigationController setNavigationBarHidden:!isShowTempPage animated:YES];
+}
+- (void) initcollectionview{
     self.pictures = [NSArray arrayWithObjects:@"1.jpg",@"2.jpg", @"3.jpg", @"4.jpg", @"5.jpg", @"6.jpg", @"7.jpg", @"8.jpg", @"9.jpg", @"10.jpg",nil];
     self.names = [NSArray arrayWithObjects:@"小钙",@"小铁", @"小锌", @"小溪", @"小青", @"小海", @"小莉", @"小皮", @"小鹏", @"小碳",nil];
     
@@ -121,18 +128,20 @@
  */
 
 #pragma mark - button对应事件
+
 - (void) dragMoving: (UIControl *) c withEvent:ev
 {
 //    函数返回一个CGPoint类型的值，表示触摸在lxrinfoview这个视图上的位置，这里返回的位置是针对lxrinfoview的坐标系的。调用时传入的view参数为空的话，返回的时触摸点在整个窗口的位置。
     //c.center = [[[ev allTouches] anyObject] locationInView:self.lxrInfoView];
     CGPoint center = [[[ev allTouches] anyObject] locationInView:self.lxrInfoView];
-    CGPoint windowcenter = [[[ev allTouches] anyObject] locationInView:nil]; if(center.x<self.lxrInfoView.frame.size.width-50&&center.x>50&&center.y>100&&center.y<self.lxrInfoView.contentSize.height-30){
+   // CGPoint windowcenter = [[[ev allTouches] anyObject] locationInView:nil];
+    if(center.x<self.lxrInfoView.frame.size.width-50&&center.x>50&&center.y>100&&center.y<self.lxrInfoView.contentSize.height-30){
       c.center = center;
     }
    
-    NSLog(@"%@",NSStringFromCGPoint(center));
-    NSLog(@"window  %@",NSStringFromCGPoint(windowcenter));
-    NSLog(@"TouchDragInside");
+    //NSLog(@"%@",NSStringFromCGPoint(center));
+    //NSLog(@"window  %@",NSStringFromCGPoint(windowcenter));
+    //NSLog(@"TouchDragInside");
 
 }
 
