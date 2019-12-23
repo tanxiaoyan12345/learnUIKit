@@ -36,6 +36,9 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    /**
+     MARK:@ydhz delegate的设置时机需要思考，参考viewWillAppear的调用时机
+     */
     self.navigationController.delegate = self;
     [super viewWillAppear:animated];
 //  这样实现效果不是很好
@@ -51,7 +54,11 @@
 - (void)initViews{
     //self.title = @"首页";
     self.myButton = [UIButton buttonWithType:UIButtonTypeCustom];
+/**
+ MARK:@ydhz UIButtonTypeRoundedRect is deprecated!
+ */
     //尝试使用UIButtonTypeRoundRect失败
+
     self.myButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2-50,[UIScreen mainScreen].bounds.size.height/2-25,100,50);
     self.myButton.titleLabel.font = [UIFont systemFontOfSize:15];
     [self.myButton setTitle:@"Hit me!" forState:UIControlStateNormal];
