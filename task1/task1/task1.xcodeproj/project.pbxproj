@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44C668CF1E7C6FCF75E36357 /* libPods-task1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B7E6A533630E33B38BD834 /* libPods-task1.a */; };
 		CE3FB6B223A7952A0026AAB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB6B123A7952A0026AAB6 /* AppDelegate.m */; };
 		CE3FB6BD23A7952B0026AAB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB6BC23A7952B0026AAB6 /* Assets.xcassets */; };
 		CE3FB6C023A7952B0026AAB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB6BE23A7952B0026AAB6 /* LaunchScreen.storyboard */; };
@@ -30,9 +31,22 @@
 		CE3FB75C23AB36970026AAB6 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB75023AB36970026AAB6 /* 2.jpg */; };
 		CE3FB75D23AB36970026AAB6 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB75123AB36970026AAB6 /* 3.jpg */; };
 		CE3FB75E23AB36970026AAB6 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB75223AB36970026AAB6 /* 1.jpg */; };
+		CE3FB78923B1CF920026AAB6 /* TXYTask2FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB78823B1CF920026AAB6 /* TXYTask2FirstViewController.m */; };
+		CE3FB78D23B1E6AE0026AAB6 /* icon_close_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB78B23B1E6AD0026AAB6 /* icon_close_white@3x.png */; };
+		CE3FB78E23B1E6AE0026AAB6 /* icon_close_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FB78C23B1E6AD0026AAB6 /* icon_close_white@2x.png */; };
+		CE3FB79423B2152C0026AAB6 /* TXYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB79323B2152C0026AAB6 /* TXYAlertViewController.m */; };
+		CE3FB7A323B21AB70026AAB6 /* UIView+AlertStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB7A223B21AB70026AAB6 /* UIView+AlertStyle.m */; };
+		CE3FB7A623B2331D0026AAB6 /* UIView+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FB7A523B2331D0026AAB6 /* UIView+Circle.m */; };
+		CEE31D8A23B313A2004B1EE0 /* UIView+Eclipse.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D8923B313A2004B1EE0 /* UIView+Eclipse.m */; };
+		CEE31D8D23B35303004B1EE0 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D8C23B35303004B1EE0 /* UIColor+Hexadecimal.m */; };
+		CEE31D9023B371E6004B1EE0 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D8F23B371E6004B1EE0 /* CircleView.m */; };
+		CEE31D9623B37388004B1EE0 /* EclipseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9523B37388004B1EE0 /* EclipseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41A6DFD7F12662691E96CC9E /* Pods-task1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task1.debug.xcconfig"; path = "Target Support Files/Pods-task1/Pods-task1.debug.xcconfig"; sourceTree = "<group>"; };
+		74B7E6A533630E33B38BD834 /* libPods-task1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-task1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2C2CA706CE7CF15A2D30E1 /* Pods-task1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task1.release.xcconfig"; path = "Target Support Files/Pods-task1/Pods-task1.release.xcconfig"; sourceTree = "<group>"; };
 		CE3FB6AD23A7952A0026AAB6 /* task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3FB6B023A7952A0026AAB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE3FB6B123A7952A0026AAB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,6 +80,24 @@
 		CE3FB75023AB36970026AAB6 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		CE3FB75123AB36970026AAB6 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		CE3FB75223AB36970026AAB6 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		CE3FB78723B1CF920026AAB6 /* TXYTask2FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXYTask2FirstViewController.h; sourceTree = "<group>"; };
+		CE3FB78823B1CF920026AAB6 /* TXYTask2FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXYTask2FirstViewController.m; sourceTree = "<group>"; };
+		CE3FB78B23B1E6AD0026AAB6 /* icon_close_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close_white@3x.png"; sourceTree = "<group>"; };
+		CE3FB78C23B1E6AD0026AAB6 /* icon_close_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close_white@2x.png"; sourceTree = "<group>"; };
+		CE3FB79223B2152C0026AAB6 /* TXYAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXYAlertViewController.h; sourceTree = "<group>"; };
+		CE3FB79323B2152C0026AAB6 /* TXYAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXYAlertViewController.m; sourceTree = "<group>"; };
+		CE3FB7A123B21AB70026AAB6 /* UIView+AlertStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+AlertStyle.h"; sourceTree = "<group>"; };
+		CE3FB7A223B21AB70026AAB6 /* UIView+AlertStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+AlertStyle.m"; sourceTree = "<group>"; };
+		CE3FB7A423B2331D0026AAB6 /* UIView+Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Circle.h"; sourceTree = "<group>"; };
+		CE3FB7A523B2331D0026AAB6 /* UIView+Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Circle.m"; sourceTree = "<group>"; };
+		CEE31D8823B313A2004B1EE0 /* UIView+Eclipse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Eclipse.h"; sourceTree = "<group>"; };
+		CEE31D8923B313A2004B1EE0 /* UIView+Eclipse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Eclipse.m"; sourceTree = "<group>"; };
+		CEE31D8B23B35303004B1EE0 /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
+		CEE31D8C23B35303004B1EE0 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
+		CEE31D8E23B371E6004B1EE0 /* CircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		CEE31D8F23B371E6004B1EE0 /* CircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		CEE31D9423B37388004B1EE0 /* EclipseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EclipseView.h; sourceTree = "<group>"; };
+		CEE31D9523B37388004B1EE0 /* EclipseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EclipseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,17 +105,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C668CF1E7C6FCF75E36357 /* libPods-task1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BB39FBED2573E78BA8D3E9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74B7E6A533630E33B38BD834 /* libPods-task1.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15279AE9A4CA15DE3091B5E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41A6DFD7F12662691E96CC9E /* Pods-task1.debug.xcconfig */,
+				CA2C2CA706CE7CF15A2D30E1 /* Pods-task1.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE3FB6A423A7952A0026AAB6 = {
 			isa = PBXGroup;
 			children = (
 				CE3FB6AF23A7952A0026AAB6 /* task1 */,
 				CE3FB6AE23A7952A0026AAB6 /* Products */,
+				15279AE9A4CA15DE3091B5E5 /* Pods */,
+				0BB39FBED2573E78BA8D3E9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +150,10 @@
 		CE3FB6AF23A7952A0026AAB6 /* task1 */ = {
 			isa = PBXGroup;
 			children = (
+				CEE31D8E23B371E6004B1EE0 /* CircleView.h */,
+				CEE31D8F23B371E6004B1EE0 /* CircleView.m */,
+				CEE31D9423B37388004B1EE0 /* EclipseView.h */,
+				CEE31D9523B37388004B1EE0 /* EclipseView.m */,
 				CE3FB74623AB36970026AAB6 /* images */,
 				CE3FB73E23AA50150026AAB6 /* Animator */,
 				CE3FB6B023A7952A0026AAB6 /* AppDelegate.h */,
@@ -111,6 +167,11 @@
 				CE3FB73F23AA503B0026AAB6 /* ViewController */,
 				CE3FB71923A8D0BE0026AAB6 /* LXRCollectionViewCell.h */,
 				CE3FB71A23A8D0BE0026AAB6 /* LXRCollectionViewCell.m */,
+				CE3FB7A723B245A40026AAB6 /* meiyongde */,
+				CE3FB7A123B21AB70026AAB6 /* UIView+AlertStyle.h */,
+				CE3FB7A223B21AB70026AAB6 /* UIView+AlertStyle.m */,
+				CEE31D8B23B35303004B1EE0 /* UIColor+Hexadecimal.h */,
+				CEE31D8C23B35303004B1EE0 /* UIColor+Hexadecimal.m */,
 			);
 			path = task1;
 			sourceTree = "<group>";
@@ -135,6 +196,10 @@
 				CE3FB6CD23A7E1230026AAB6 /* RootViewController.m */,
 				CE3FB6CF23A7E1360026AAB6 /* SecondViewController.h */,
 				CE3FB6D023A7E1360026AAB6 /* SecondViewController.m */,
+				CE3FB78723B1CF920026AAB6 /* TXYTask2FirstViewController.h */,
+				CE3FB78823B1CF920026AAB6 /* TXYTask2FirstViewController.m */,
+				CE3FB79223B2152C0026AAB6 /* TXYAlertViewController.h */,
+				CE3FB79323B2152C0026AAB6 /* TXYAlertViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -142,6 +207,7 @@
 		CE3FB74623AB36970026AAB6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CE3FB78A23B1E6AD0026AAB6 /* icon */,
 				CE3FB74723AB36970026AAB6 /* flag.png */,
 				CE3FB74823AB36970026AAB6 /* lxr.jpg */,
 				CE3FB74923AB36970026AAB6 /* 8.jpg */,
@@ -158,6 +224,26 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		CE3FB78A23B1E6AD0026AAB6 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				CE3FB78B23B1E6AD0026AAB6 /* icon_close_white@3x.png */,
+				CE3FB78C23B1E6AD0026AAB6 /* icon_close_white@2x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
+		CE3FB7A723B245A40026AAB6 /* meiyongde */ = {
+			isa = PBXGroup;
+			children = (
+				CE3FB7A423B2331D0026AAB6 /* UIView+Circle.h */,
+				CE3FB7A523B2331D0026AAB6 /* UIView+Circle.m */,
+				CEE31D8823B313A2004B1EE0 /* UIView+Eclipse.h */,
+				CEE31D8923B313A2004B1EE0 /* UIView+Eclipse.m */,
+			);
+			path = meiyongde;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +251,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE3FB6C623A7952B0026AAB6 /* Build configuration list for PBXNativeTarget "task1" */;
 			buildPhases = (
+				E692ABC63D91B504FFC8F522 /* [CP] Check Pods Manifest.lock */,
 				CE3FB6A923A7952A0026AAB6 /* Sources */,
 				CE3FB6AA23A7952A0026AAB6 /* Frameworks */,
 				CE3FB6AB23A7952A0026AAB6 /* Resources */,
@@ -217,10 +304,12 @@
 			files = (
 				CE3FB75B23AB36970026AAB6 /* 6.jpg in Resources */,
 				CE3FB75823AB36970026AAB6 /* 4.jpg in Resources */,
+				CE3FB78E23B1E6AE0026AAB6 /* icon_close_white@2x.png in Resources */,
 				CE3FB75523AB36970026AAB6 /* 8.jpg in Resources */,
 				CE3FB75723AB36970026AAB6 /* 10.jpg in Resources */,
 				CE3FB75D23AB36970026AAB6 /* 3.jpg in Resources */,
 				CE3FB75923AB36970026AAB6 /* 5.jpg in Resources */,
+				CE3FB78D23B1E6AE0026AAB6 /* icon_close_white@3x.png in Resources */,
 				CE3FB75423AB36970026AAB6 /* lxr.jpg in Resources */,
 				CE3FB75C23AB36970026AAB6 /* 2.jpg in Resources */,
 				CE3FB6C023A7952B0026AAB6 /* LaunchScreen.storyboard in Resources */,
@@ -234,20 +323,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E692ABC63D91B504FFC8F522 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-task1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE3FB6A923A7952A0026AAB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE31D9023B371E6004B1EE0 /* CircleView.m in Sources */,
 				CE3FB6D123A7E1360026AAB6 /* SecondViewController.m in Sources */,
 				CE3FB71B23A8D0BE0026AAB6 /* LXRCollectionViewCell.m in Sources */,
+				CE3FB7A623B2331D0026AAB6 /* UIView+Circle.m in Sources */,
 				CE3FB74523AA59AE0026AAB6 /* BiggerClickAreaButton.m in Sources */,
+				CE3FB78923B1CF920026AAB6 /* TXYTask2FirstViewController.m in Sources */,
 				CE3FB6B223A7952A0026AAB6 /* AppDelegate.m in Sources */,
 				CE3FB6E023A880120026AAB6 /* PushAnimator.m in Sources */,
 				CE3FB6E323A8A3230026AAB6 /* PopAnimator.m in Sources */,
+				CEE31D8A23B313A2004B1EE0 /* UIView+Eclipse.m in Sources */,
 				CE3FB6C323A7952B0026AAB6 /* main.m in Sources */,
 				CE3FB6DD23A878480026AAB6 /* BaseAnimator.m in Sources */,
+				CE3FB7A323B21AB70026AAB6 /* UIView+AlertStyle.m in Sources */,
+				CEE31D8D23B35303004B1EE0 /* UIColor+Hexadecimal.m in Sources */,
 				CE3FB6CE23A7E1230026AAB6 /* RootViewController.m in Sources */,
+				CEE31D9623B37388004B1EE0 /* EclipseView.m in Sources */,
+				CE3FB79423B2152C0026AAB6 /* TXYAlertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +499,7 @@
 		};
 		CE3FB6C723A7952B0026AAB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41A6DFD7F12662691E96CC9E /* Pods-task1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,11 +512,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.aaaaa.task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
 			};
 			name = Debug;
 		};
 		CE3FB6C823A7952B0026AAB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA2C2CA706CE7CF15A2D30E1 /* Pods-task1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -406,6 +531,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.aaaaa.task1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
 			};
 			name = Release;
 		};

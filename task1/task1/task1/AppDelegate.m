@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
-#import "RootNavigationViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -30,8 +30,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     RootViewController *rootVc = [[RootViewController alloc]init];
-    rootVc.view.backgroundColor = [UIColor whiteColor];
     UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:rootVc];
+    rootVc.view.backgroundColor = [UIColor whiteColor];
     [self.window setRootViewController:rootNav];
     [self.window makeKeyAndVisible];
     return YES;

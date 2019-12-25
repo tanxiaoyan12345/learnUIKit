@@ -9,9 +9,11 @@
 #import "RootViewController.h"
 #import "SecondViewController.h"
 #import "PushAnimator.h"
+#include "TXYTask2FirstViewController.h"
 @interface RootViewController ()<UINavigationControllerDelegate>
 
-@property (nonatomic,strong) UIButton *myButton;
+@property (strong, nonatomic) UIButton *myButton;
+@property (strong, nonatomic) UIButton *task2Button;
 
 @end
 
@@ -33,6 +35,7 @@
     // Do any additional setup after loading the view.
     //self.navigationController.navigationBarHidden = YES;
     [self initViews];
+    [self inittask2Button];
     self.navigationController.delegate = self;
     
 }
@@ -62,6 +65,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+     
 //  这样实现效果不是很好
 // [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
@@ -86,20 +90,24 @@
     self.myButton.layer.cornerRadius = 3;
     self.myButton.layer.masksToBounds = YES;
      
-    
     [self.myButton addTarget:self action:@selector(buttonEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.myButton];
     
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)inittask2Button{
+    self.task2Button = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.task2Button.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2-50,200,100,50);
+    [self.task2Button setTitle:@"task2!" forState:UIControlStateNormal];
+    [self.task2Button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.task2Button.layer setBorderColor:[UIColor grayColor].CGColor];
+    [self.task2Button.layer setBorderWidth:2.0];
+    self.task2Button.layer.cornerRadius = 3;
+    self.task2Button.layer.masksToBounds = YES;
+    [self.task2Button addTarget:self action:@selector(task2ButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.task2Button];
+    
 }
-*/
 #pragma mark - 动画代理UINavigationControllerDelegate
 
 - (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
@@ -131,6 +139,8 @@
     [self.navigationController setNavigationBarHidden:isShowHomePage animated:YES];
 }*/
 
+
+
 #pragma mark - action
 
 - (void)buttonEvent:(UIButton *)button {
@@ -139,6 +149,10 @@
                                          animated:YES];
 }
 
+- (void)task2ButtonEvent:(UIButton *)button{
+    TXYTask2FirstViewController *vc = [[TXYTask2FirstViewController alloc] init];
+    [self presentViewController:vc animated:true completion:nil];
+}
 
 
 @end

@@ -95,6 +95,11 @@
     NSLog(@"second----%s",isShowTempPage?"YES":"NO");
     [self.navigationController setNavigationBarHidden:!isShowTempPage animated:YES];
 }
+
+-(void)dealloc{
+    self.navigationController.delegate = nil;
+}
+
 - (void) initcollectionview{
     self.pictures = [NSArray arrayWithObjects:@"1.jpg",@"2.jpg", @"3.jpg", @"4.jpg", @"5.jpg", @"6.jpg", @"7.jpg", @"8.jpg", @"9.jpg", @"10.jpg",nil];
     self.names = [NSArray arrayWithObjects:@"小钙",@"小铁", @"小锌", @"小溪", @"小青", @"小海", @"小莉", @"小皮", @"小鹏", @"小碳",nil];
