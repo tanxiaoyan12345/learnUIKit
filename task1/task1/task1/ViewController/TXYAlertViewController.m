@@ -92,7 +92,6 @@
         make.top.equalTo(_alertContent.mas_bottom).with.offset(30);
         make.left.right.and.bottom.equalTo(_alertView);
     }];
-
 }
 
 - (void)cancelButtonEvent {

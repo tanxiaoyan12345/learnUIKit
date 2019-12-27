@@ -96,35 +96,11 @@
     }
 }
 
-//- (CGSize)sizeForChildContentContainer:(id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize
-//{
-//    if (container == self.presentedViewController)
-//        return ((UIViewController*)container).preferredContentSize;
-//    else
-//        return [super sizeForChildContentContainer:container withParentContainerSize:parentSize];
-//}
-
-//在我们的自定义呈现中，被呈现的 view 并没有完全完全填充整个屏幕，
-//被呈现的 view 的过渡动画之后的最终位置，是由 UIPresentationViewController 来负责定义的。
-//我们重载 frameOfPresentedViewInContainerView 方法来定义这个最终位置
-/*
-- (CGRect)frameOfPresentedViewInContainerView
-{
-
-//    CGRect presentedViewControllerFrame = CGRectMake([UIScreen mainScreen].bounds.size.width/2-150, [UIScreen mainScreen].bounds.size.height/2-125, 300, 250);
-//    return presentedViewControllerFrame;
-}*/
-
-//  This method is similar to the -viewWillLayoutSubviews method in
-//  UIViewController.  It allows the presentation controller to alter the
-//  layout of any custom views it manages.
-//
 - (void)containerViewWillLayoutSubviews
 {
     [super containerViewWillLayoutSubviews];
     self.dimmingView.frame = self.containerView.bounds;
 }
-
 
 //  This method is invoked whenever the presentedViewController's
 //  preferredContentSize property changes.  It is also invoked just before the
