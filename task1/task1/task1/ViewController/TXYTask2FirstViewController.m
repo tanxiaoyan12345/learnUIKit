@@ -11,6 +11,8 @@
 #import "UIColor+Hexadecimal.h"
 #import "CircleView.h"
 #import "EclipseView.h"
+#import "TXYPresentationController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface TXYTask2FirstViewController ()
 
@@ -22,8 +24,9 @@
 @property (strong, nonatomic) UIImage *leftHeadImage;
 @property (strong, nonatomic) UIImage *rightHeadImage;
 @property (strong, nonatomic) UIButton *openNickNameButton;
-@property (strong, nonatomic) CALayer *animationLayer;
-@property (strong, nonatomic) CALayer *calleEnd;
+@property (strong, nonatomic) UILabel *callEnd;
+@property (strong, nonatomic) UILabel *openNickNameLabel;
+@property (strong, nonatomic) UILabel *reMind;
 
 @end
 
@@ -35,7 +38,7 @@
     [self initBackground];
     [self initButtons];
     [self initheadimages];
-
+    [self initLabels];
 }
 
 - (void)initBackground {
@@ -71,8 +74,17 @@
     self.openNickNameButton = [[UIButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2-120, [UIScreen mainScreen].bounds.size.height/2-22, 240, 44)];
     self.openNickNameButton.layer.cornerRadius = 22;
     self.openNickNameButton.backgroundColor = [UIColor colorWithHexString:@"#FE2C55"];
-    [self.openNickNameButton setTitle:@"向对方公开昵称" forState:UIControlStateNormal];
-    [self.openNickNameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//这样做文字会虚？？？
+//    [self.openNickNameButton setTitle:@"向对方公开昵称" forState:UIControlStateNormal];
+//    [self.openNickNameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    self.openNickNameButton.titleLabel.font = [UIFont systemFontOfSize:18];
+//emmmm,两种都虚
+    self.openNickNameLabel = [[UILabel alloc] initWithFrame:self.openNickNameButton.bounds];
+    self.openNickNameLabel.text = @"向对方公开昵称";
+    self.openNickNameLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
+    self.openNickNameLabel.textAlignment = NSTextAlignmentCenter;
+    self.openNickNameLabel.textColor = [UIColor whiteColor];
+    [self.openNickNameButton addSubview:self.openNickNameLabel];
     [self.openNickNameButton addTarget:self action:@selector(openNickNameEvent:) forControlEvents:UIControlEventTouchUpInside];
     self.openNickNameButton.layer.shouldRasterize = YES;
     [self.view addSubview:self.openNickNameButton];
@@ -80,7 +92,7 @@
     
 }
 - (void)initheadimages {
-    self.leftHead = [[EclipseView alloc] initWithFrame:CGRectMake(130, 220, 80, 80)];
+    self.leftHead = [[EclipseView alloc] initWithFrame:CGRectMake(130, 200, 80, 80)];
     [self.leftHead eclipse];
     [self.leftHead stroke];
     [self.view addSubview:self.leftHead];
@@ -89,7 +101,7 @@
     self.leftHead.layer.contentsGravity = kCAGravityResize;
     self.leftHead.layer.contentsScale = self.leftHeadImage.scale;
     
-    self.rightHead = [[CircleView alloc] initWithFrame:CGRectMake(205, 220, 80, 80)];
+    self.rightHead = [[CircleView alloc] initWithFrame:CGRectMake(205, 200, 80, 80)];
     [self.rightHead circle];
     [self.rightHead stroke];
     [self.view addSubview:self.rightHead];
@@ -99,21 +111,40 @@
     self.leftHead.layer.contentsScale = self.leftHeadImage.scale;
 }
 
+- (void)initLabels {
+    self.callEnd = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2-80, [UIScreen mainScreen].bounds.size.height/2-80, 160, 50)];
+    self.callEnd.text = @"连线结束 00:00";
+    self.callEnd.textAlignment = NSTextAlignmentCenter;
+    self.callEnd.font =[UIFont fontWithName:@"Helvetica-Bold" size:18];
+    self.callEnd.textColor = [UIColor whiteColor];
+    [self.view addSubview:self.callEnd];
+    self.reMind = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2-125, [UIScreen mainScreen].bounds.size.height/2+30, 250, 50)];
+    self.reMind.text = @"双方均公开后，可互相查看个人信息";
+    self.reMind.textAlignment = NSTextAlignmentCenter;
+    self.reMind.font =[UIFont systemFontOfSize:14];
+    self.reMind.textColor = [UIColor whiteColor];
+    [self.view addSubview:self.reMind];
+}
 
 - (void)closeTempView {
      [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)tipOffEvent {
-    TXYAlertViewController *alert = [[TXYAlertViewController alloc] init];
-    alert.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-    alert.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self presentViewController:alert animated:true completion:nil];
+//    TXYAlertViewController *alert = [[TXYAlertViewController alloc] init];
+//    alert.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+//    alert.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+//    [self presentViewController:alert animated:true completion:nil];
+    TXYAlertViewController *toVC = [[TXYAlertViewController alloc] init];
+    TXYPresentationController *presentationC = [[TXYPresentationController alloc] initWithPresentedViewController:toVC presentingViewController:self];
+    toVC.transitioningDelegate = presentationC;
+    [self presentViewController:toVC animated:YES completion:nil];
     
 }
 
 - (void)openNickNameEvent:(UIButton *)sender {
     [self shakingAnimation];
+    AudioServicesPlaySystemSound(1012);
     [self actionFixMultiClick_enabled:sender];
 }
 
@@ -128,8 +159,9 @@
     anim.keyPath = @"transform.rotation";
     anim.values = @[@(Angle2Radian(-5)), @(Angle2Radian(5)), @(Angle2Radian(-5))];
     anim.duration = 0.25;
-    anim.delegate = self;
+    //anim.delegate = self;
     [self.openNickNameButton.layer addAnimation:anim forKey:nil];
 }
+
 
 @end

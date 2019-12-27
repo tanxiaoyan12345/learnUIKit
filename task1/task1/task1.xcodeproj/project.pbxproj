@@ -41,6 +41,9 @@
 		CEE31D8D23B35303004B1EE0 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D8C23B35303004B1EE0 /* UIColor+Hexadecimal.m */; };
 		CEE31D9023B371E6004B1EE0 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D8F23B371E6004B1EE0 /* CircleView.m */; };
 		CEE31D9623B37388004B1EE0 /* EclipseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9523B37388004B1EE0 /* EclipseView.m */; };
+		CEE31D9923B4614D004B1EE0 /* TXYPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9823B4614D004B1EE0 /* TXYPresentationController.m */; };
+		CEE31D9C23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9B23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m */; };
+		CEE31D9F23B60D71004B1EE0 /* AlertStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9E23B60D71004B1EE0 /* AlertStyleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,12 @@
 		CEE31D8F23B371E6004B1EE0 /* CircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		CEE31D9423B37388004B1EE0 /* EclipseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EclipseView.h; sourceTree = "<group>"; };
 		CEE31D9523B37388004B1EE0 /* EclipseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EclipseView.m; sourceTree = "<group>"; };
+		CEE31D9723B4614D004B1EE0 /* TXYPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXYPresentationController.h; sourceTree = "<group>"; };
+		CEE31D9823B4614D004B1EE0 /* TXYPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXYPresentationController.m; sourceTree = "<group>"; };
+		CEE31D9A23B4B6B5004B1EE0 /* TXYFirstPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXYFirstPresentViewController.h; sourceTree = "<group>"; };
+		CEE31D9B23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXYFirstPresentViewController.m; sourceTree = "<group>"; };
+		CEE31D9D23B60D71004B1EE0 /* AlertStyleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertStyleView.h; sourceTree = "<group>"; };
+		CEE31D9E23B60D71004B1EE0 /* AlertStyleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertStyleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +159,7 @@
 		CE3FB6AF23A7952A0026AAB6 /* task1 */ = {
 			isa = PBXGroup;
 			children = (
-				CEE31D8E23B371E6004B1EE0 /* CircleView.h */,
-				CEE31D8F23B371E6004B1EE0 /* CircleView.m */,
-				CEE31D9423B37388004B1EE0 /* EclipseView.h */,
-				CEE31D9523B37388004B1EE0 /* EclipseView.m */,
+				CEE31DA023B60DCF004B1EE0 /* CustomViews */,
 				CE3FB74623AB36970026AAB6 /* images */,
 				CE3FB73E23AA50150026AAB6 /* Animator */,
 				CE3FB6B023A7952A0026AAB6 /* AppDelegate.h */,
@@ -168,8 +174,6 @@
 				CE3FB71923A8D0BE0026AAB6 /* LXRCollectionViewCell.h */,
 				CE3FB71A23A8D0BE0026AAB6 /* LXRCollectionViewCell.m */,
 				CE3FB7A723B245A40026AAB6 /* meiyongde */,
-				CE3FB7A123B21AB70026AAB6 /* UIView+AlertStyle.h */,
-				CE3FB7A223B21AB70026AAB6 /* UIView+AlertStyle.m */,
 				CEE31D8B23B35303004B1EE0 /* UIColor+Hexadecimal.h */,
 				CEE31D8C23B35303004B1EE0 /* UIColor+Hexadecimal.m */,
 			);
@@ -200,6 +204,10 @@
 				CE3FB78823B1CF920026AAB6 /* TXYTask2FirstViewController.m */,
 				CE3FB79223B2152C0026AAB6 /* TXYAlertViewController.h */,
 				CE3FB79323B2152C0026AAB6 /* TXYAlertViewController.m */,
+				CEE31D9723B4614D004B1EE0 /* TXYPresentationController.h */,
+				CEE31D9823B4614D004B1EE0 /* TXYPresentationController.m */,
+				CEE31D9A23B4B6B5004B1EE0 /* TXYFirstPresentViewController.h */,
+				CEE31D9B23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -236,12 +244,27 @@
 		CE3FB7A723B245A40026AAB6 /* meiyongde */ = {
 			isa = PBXGroup;
 			children = (
+				CE3FB7A123B21AB70026AAB6 /* UIView+AlertStyle.h */,
+				CE3FB7A223B21AB70026AAB6 /* UIView+AlertStyle.m */,
 				CE3FB7A423B2331D0026AAB6 /* UIView+Circle.h */,
 				CE3FB7A523B2331D0026AAB6 /* UIView+Circle.m */,
 				CEE31D8823B313A2004B1EE0 /* UIView+Eclipse.h */,
 				CEE31D8923B313A2004B1EE0 /* UIView+Eclipse.m */,
 			);
 			path = meiyongde;
+			sourceTree = "<group>";
+		};
+		CEE31DA023B60DCF004B1EE0 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CEE31D8E23B371E6004B1EE0 /* CircleView.h */,
+				CEE31D8F23B371E6004B1EE0 /* CircleView.m */,
+				CEE31D9423B37388004B1EE0 /* EclipseView.h */,
+				CEE31D9523B37388004B1EE0 /* EclipseView.m */,
+				CEE31D9D23B60D71004B1EE0 /* AlertStyleView.h */,
+				CEE31D9E23B60D71004B1EE0 /* AlertStyleView.m */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +379,7 @@
 				CEE31D9023B371E6004B1EE0 /* CircleView.m in Sources */,
 				CE3FB6D123A7E1360026AAB6 /* SecondViewController.m in Sources */,
 				CE3FB71B23A8D0BE0026AAB6 /* LXRCollectionViewCell.m in Sources */,
+				CEE31D9F23B60D71004B1EE0 /* AlertStyleView.m in Sources */,
 				CE3FB7A623B2331D0026AAB6 /* UIView+Circle.m in Sources */,
 				CE3FB74523AA59AE0026AAB6 /* BiggerClickAreaButton.m in Sources */,
 				CE3FB78923B1CF920026AAB6 /* TXYTask2FirstViewController.m in Sources */,
@@ -364,8 +388,10 @@
 				CE3FB6E323A8A3230026AAB6 /* PopAnimator.m in Sources */,
 				CEE31D8A23B313A2004B1EE0 /* UIView+Eclipse.m in Sources */,
 				CE3FB6C323A7952B0026AAB6 /* main.m in Sources */,
+				CEE31D9923B4614D004B1EE0 /* TXYPresentationController.m in Sources */,
 				CE3FB6DD23A878480026AAB6 /* BaseAnimator.m in Sources */,
 				CE3FB7A323B21AB70026AAB6 /* UIView+AlertStyle.m in Sources */,
+				CEE31D9C23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m in Sources */,
 				CEE31D8D23B35303004B1EE0 /* UIColor+Hexadecimal.m in Sources */,
 				CE3FB6CE23A7E1230026AAB6 /* RootViewController.m in Sources */,
 				CEE31D9623B37388004B1EE0 /* EclipseView.m in Sources */,

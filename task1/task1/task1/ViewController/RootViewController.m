@@ -10,6 +10,7 @@
 #import "SecondViewController.h"
 #import "PushAnimator.h"
 #include "TXYTask2FirstViewController.h"
+#include "TXYFirstPresentViewController.h"
 @interface RootViewController ()<UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIButton *myButton;
@@ -150,8 +151,13 @@
 }
 
 - (void)task2ButtonEvent:(UIButton *)button{
-    TXYTask2FirstViewController *vc = [[TXYTask2FirstViewController alloc] init];
-    [self presentViewController:vc animated:true completion:nil];
+    //直接present会有显示上的问题
+    /*TXYTask2FirstViewController *vc = [[TXYTask2FirstViewController alloc] init];
+    [self presentViewController:vc animated:true completion:nil];*/
+    TXYTask2FirstViewController *toVC = [[TXYTask2FirstViewController alloc] init];
+    TXYFirstPresentViewController *presentationC = [[TXYFirstPresentViewController alloc] initWithPresentedViewController:toVC presentingViewController:self];
+    toVC.transitioningDelegate = presentationC;
+    [self presentViewController:toVC animated:YES completion:nil];
 }
 
 
