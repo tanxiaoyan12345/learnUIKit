@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TXYTask2FirstViewController : UIViewController <CAAnimationDelegate>
+@interface TXYTask2FirstViewController : UIViewController
 
 @end
 

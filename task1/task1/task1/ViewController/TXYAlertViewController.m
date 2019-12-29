@@ -95,7 +95,10 @@
 }
 
 - (void)cancelButtonEvent {
-    [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self dismissViewControllerAnimated:NO completion:nil];  // pop本界面
+//    });
 }
 
 @end

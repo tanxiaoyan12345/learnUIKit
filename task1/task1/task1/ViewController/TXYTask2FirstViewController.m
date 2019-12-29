@@ -27,6 +27,7 @@
 @property (strong, nonatomic) UILabel *callEnd;
 @property (strong, nonatomic) UILabel *openNickNameLabel;
 @property (strong, nonatomic) UILabel *reMind;
+@property (strong, nonatomic) UIView *headImageView;
 
 @end
 
@@ -86,25 +87,29 @@
     self.openNickNameLabel.textColor = [UIColor whiteColor];
     [self.openNickNameButton addSubview:self.openNickNameLabel];
     [self.openNickNameButton addTarget:self action:@selector(openNickNameEvent:) forControlEvents:UIControlEventTouchUpInside];
-    self.openNickNameButton.layer.shouldRasterize = YES;
+//最初这样的目的是考虑组透明
+    //self.openNickNameButton.layer.shouldRasterize = YES;
     [self.view addSubview:self.openNickNameButton];
     
     
 }
 - (void)initheadimages {
-    self.leftHead = [[EclipseView alloc] initWithFrame:CGRectMake(130, 200, 80, 80)];
+    self.headImageView = [[UIView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2-77, [UIScreen mainScreen].bounds.size.height/2-200, 154, 80)];
+    [self.view addSubview:self.headImageView];
+    
+    self.leftHead = [[EclipseView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
     [self.leftHead eclipse];
     [self.leftHead stroke];
-    [self.view addSubview:self.leftHead];
+    [self.headImageView addSubview:self.leftHead];
     self.leftHeadImage = [UIImage imageNamed:@"2.jpg"];
     self.leftHead.layer.contents = (__bridge id)self.leftHeadImage.CGImage;
     self.leftHead.layer.contentsGravity = kCAGravityResize;
     self.leftHead.layer.contentsScale = self.leftHeadImage.scale;
     
-    self.rightHead = [[CircleView alloc] initWithFrame:CGRectMake(205, 200, 80, 80)];
+    self.rightHead = [[CircleView alloc] initWithFrame:CGRectMake(74, 0, 80, 80)];
     [self.rightHead circle];
     [self.rightHead stroke];
-    [self.view addSubview:self.rightHead];
+    [self.headImageView addSubview:self.rightHead];
     self.rightHeadImage = [UIImage imageNamed:@"3.jpg"];
     self.rightHead.layer.contents = (__bridge id)self.rightHeadImage.CGImage;
     self.leftHead.layer.contentsGravity = kCAGravityResize;
@@ -139,7 +144,6 @@
     TXYPresentationController *presentationC = [[TXYPresentationController alloc] initWithPresentedViewController:toVC presentingViewController:self];
     toVC.transitioningDelegate = presentationC;
     [self presentViewController:toVC animated:YES completion:nil];
-    
 }
 
 - (void)openNickNameEvent:(UIButton *)sender {

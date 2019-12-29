@@ -19,8 +19,7 @@
 }
 
 #pragma mark - 重写UIPresentationController个别方法
-- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController
-{
+- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController{
     self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
     
     if (self) {
@@ -50,8 +49,7 @@
 - (void)dismissalTransitionDidEnd:(BOOL)completed{
 }
 
-- (void)containerViewWillLayoutSubviews
-{
+- (void)containerViewWillLayoutSubviews{
     [super containerViewWillLayoutSubviews];
 }
 
@@ -60,8 +58,7 @@
 //  presentation transition begins (prior to -presentationTransitionWillBegin).
 //  建议就这样重写就行，这个应该是控制器内容大小变化时，就会调用这个方法， 比如适配横竖屏幕时，翻转屏幕时
 //  可以使用UIContentContainer的方法来调整任何子视图控制器的大小或位置。
-- (void)preferredContentSizeDidChangeForChildContentContainer:(id<UIContentContainer>)container
-{
+- (void)preferredContentSizeDidChangeForChildContentContainer:(id<UIContentContainer>)container{
     [super preferredContentSizeDidChangeForChildContentContainer:container];
     
     if (container == self.presentedViewController)

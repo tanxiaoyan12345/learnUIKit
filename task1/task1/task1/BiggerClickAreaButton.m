@@ -16,12 +16,10 @@
      MARK:@ydhz 发散扩大响应区域👍
      TODO:@txy 思考以下实现，是否有更简单的计算方式
      */
-
     CGRect bounds = self.bounds;
     //若原热区小于80*80，则放大热区，否则保持原大小不变
-    CGFloat widthDelta = MAX(80.0 - bounds.size.width, 0);
-    CGFloat heightDelta = MAX(80.0 - bounds.size.height, 0);
-    bounds = CGRectInset(bounds, -0.5 * widthDelta, -0.5 * heightDelta);
+    CGFloat widthDelta = MAX(80.0 , bounds.size.width);
+    bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, widthDelta, widthDelta);
     return CGRectContainsPoint(bounds, point);
 }
 

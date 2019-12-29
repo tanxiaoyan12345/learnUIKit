@@ -129,7 +129,6 @@
 - (void)navigationController:(UINavigationController *)navigationController  didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     // 判断要显示的控制器是否是首页，是首页本身就隐藏导航栏
     BOOL isShowHomePage = [viewController isKindOfClass:[self class]];
-    NSLog(@"%s",isShowHomePage?"YES":"NO");
     [self.navigationController setNavigationBarHidden:isShowHomePage animated:YES];
 }
 

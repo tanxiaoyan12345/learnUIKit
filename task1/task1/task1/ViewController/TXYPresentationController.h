@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TXYPresentationController : UIPresentationController<UIViewControllerTransitioningDelegate>
+@interface TXYPresentationController : UIPresentationController<UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning>
 
 
 @end

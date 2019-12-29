@@ -11,7 +11,6 @@
 @implementation PopAnimator
 - (void)animateTransitionEvent {
     
-   NSLog(@"pop-->%@",self.containerView);
     [self.containerView addSubview:self.toViewController.view];
     
     
