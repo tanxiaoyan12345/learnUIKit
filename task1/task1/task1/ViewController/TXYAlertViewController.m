@@ -30,7 +30,7 @@
 
 - (void)initAlertView {
     self.alertView = [[AlertStyleView alloc] initWithFrame:self.view.bounds];
-    self.alertView = [[AlertStyleView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2-150, [UIScreen mainScreen].bounds.size.height/2-125, 300, 250)];
+//    self.alertView = [[AlertStyleView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2-150, [UIScreen mainScreen].bounds.size.height/2-125, 300, 250)];
     [self.alertView setAlertStyle];
     self.alertView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.alertView];
@@ -72,11 +72,11 @@
 }
  
 - (void)buildElem {
-//    __weak typeof(self) weakSelf = self;
-//    [_alertView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.equalTo(weakSelf.view);
-//        make.size.mas_equalTo(CGSizeMake(300, 250));
-//    }];
+    __weak typeof(self) weakSelf = self;
+    [_alertView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(weakSelf.view);
+        make.size.mas_equalTo(CGSizeMake(300, 250));
+    }];
     [_alertTitle mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_alertView.mas_top).with.offset(30);
         make.left.right.equalTo(_alertView);

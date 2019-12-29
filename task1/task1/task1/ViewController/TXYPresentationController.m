@@ -61,12 +61,12 @@
     self.dimmingView.alpha = 0.f;
     [transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         self.dimmingView.alpha = 0.4f;
-    } completion:NULL];
+    } completion:nil];
 }
 
 - (void)dimmingViewTapped:(UITapGestureRecognizer*)sender
 {
-    [self.presentingViewController dismissViewControllerAnimated:NO completion:NULL];
+    [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
 // 在呈现过渡结束时被调用的，并且该方法提供一个布尔变量来判断过渡效果是否完成

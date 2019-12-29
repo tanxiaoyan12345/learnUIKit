@@ -153,11 +153,10 @@
     sender.alpha = 0.5;
 }
 
-#define Angle2Radian(angle) ((angle) / 180.0 * M_PI)
 - (void)shakingAnimation {
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animation];
     anim.keyPath = @"transform.rotation";
-    anim.values = @[@(Angle2Radian(-5)), @(Angle2Radian(5)), @(Angle2Radian(-5))];
+    anim.values = @[@((-5) / 180.0 * M_PI), @((5) / 180.0 * M_PI), @((-5) / 180.0 * M_PI)];
     anim.duration = 0.25;
     //anim.delegate = self;
     [self.openNickNameButton.layer addAnimation:anim forKey:nil];
