@@ -44,6 +44,8 @@
 		CEE31D9923B4614D004B1EE0 /* TXYPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9823B4614D004B1EE0 /* TXYPresentationController.m */; };
 		CEE31D9C23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9B23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m */; };
 		CEE31D9F23B60D71004B1EE0 /* AlertStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31D9E23B60D71004B1EE0 /* AlertStyleView.m */; };
+		CEE31DB323BAF1D0004B1EE0 /* UIViewController+EverPath.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB223BAF1D0004B1EE0 /* UIViewController+EverPath.m */; };
+		CEE31DB623BAF663004B1EE0 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE31DB523BAF663004B1EE0 /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,10 @@
 		CEE31D9B23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXYFirstPresentViewController.m; sourceTree = "<group>"; };
 		CEE31D9D23B60D71004B1EE0 /* AlertStyleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertStyleView.h; sourceTree = "<group>"; };
 		CEE31D9E23B60D71004B1EE0 /* AlertStyleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertStyleView.m; sourceTree = "<group>"; };
+		CEE31DB123BAF1D0004B1EE0 /* UIViewController+EverPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EverPath.h"; sourceTree = "<group>"; };
+		CEE31DB223BAF1D0004B1EE0 /* UIViewController+EverPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EverPath.m"; sourceTree = "<group>"; };
+		CEE31DB423BAF663004B1EE0 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		CEE31DB523BAF663004B1EE0 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,8 @@
 				CE3FB7A723B245A40026AAB6 /* meiyongde */,
 				CEE31D8B23B35303004B1EE0 /* UIColor+Hexadecimal.h */,
 				CEE31D8C23B35303004B1EE0 /* UIColor+Hexadecimal.m */,
+				CEE31DB123BAF1D0004B1EE0 /* UIViewController+EverPath.h */,
+				CEE31DB223BAF1D0004B1EE0 /* UIViewController+EverPath.m */,
 			);
 			path = task1;
 			sourceTree = "<group>";
@@ -208,6 +216,8 @@
 				CEE31D9823B4614D004B1EE0 /* TXYPresentationController.m */,
 				CEE31D9A23B4B6B5004B1EE0 /* TXYFirstPresentViewController.h */,
 				CEE31D9B23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m */,
+				CEE31DB423BAF663004B1EE0 /* MyViewController.h */,
+				CEE31DB523BAF663004B1EE0 /* MyViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -376,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE31DB623BAF663004B1EE0 /* MyViewController.m in Sources */,
 				CEE31D9023B371E6004B1EE0 /* CircleView.m in Sources */,
 				CE3FB6D123A7E1360026AAB6 /* SecondViewController.m in Sources */,
 				CE3FB71B23A8D0BE0026AAB6 /* LXRCollectionViewCell.m in Sources */,
@@ -391,6 +402,7 @@
 				CEE31D9923B4614D004B1EE0 /* TXYPresentationController.m in Sources */,
 				CE3FB6DD23A878480026AAB6 /* BaseAnimator.m in Sources */,
 				CE3FB7A323B21AB70026AAB6 /* UIView+AlertStyle.m in Sources */,
+				CEE31DB323BAF1D0004B1EE0 /* UIViewController+EverPath.m in Sources */,
 				CEE31D9C23B4B6B5004B1EE0 /* TXYFirstPresentViewController.m in Sources */,
 				CEE31D8D23B35303004B1EE0 /* UIColor+Hexadecimal.m in Sources */,
 				CE3FB6CE23A7E1230026AAB6 /* RootViewController.m in Sources */,
